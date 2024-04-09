@@ -1,4 +1,3 @@
-// WeatherData.cs
 public class WeatherData
 {
     private static WeatherData instance;
