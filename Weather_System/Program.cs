@@ -7,7 +7,6 @@ class Program
         WeatherStation weatherStation = new WeatherStation();
         weatherStation.GetUserInput();
 
-        // Simulate weather data changes
         weatherData.SetMeasurements();
         weatherData.SetMeasurements();
         weatherData.SetMeasurements();
