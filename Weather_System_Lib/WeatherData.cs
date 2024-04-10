@@ -1,3 +1,5 @@
+namespace Weather_System_Lib;
+using System.Collections.Generic;
 /// <summary>
 /// Represents the weather data subject.
 /// </summary>
@@ -5,43 +7,52 @@
 public class WeatherData
 {
     private static WeatherData instance;
-    private readonly Random random;
-    private float temperature;
-    private float humidity;
-    private float pressure;
+    //private readonly Random random;
+    private double temperature;
+    private double humidity;
+    private double pressure;
 
     private List<IDisplay> shows = new List<IDisplay>();
 
     private WeatherData()
     {
-        random = new Random();
     }
 
     public static WeatherData GetInstance
     {
-        get{
-             return instance = new WeatherData();
-           }
+        get
+        {
+            if(instance == null)
+            {
+                instance = new WeatherData();    
+            }
+            return instance;
+        }
     }
 
+    public void SetMeasurements(double temperature, double humidity, double pressure)
+    {
+        this.temperature = temperature; //random.Next(-20, 40);
+        this.humidity = humidity; //random.Next(0, 100);
+        this.pressure = pressure; //random.Next(980, 1040);
+        Notify();
+    }
+    
     public void Attach(IDisplay show)
     {
-        display.add
-    }
-    public void SetMeasurements()
-    {
-        temperature = random.Next(-20, 40);
-        humidity = random.Next(0, 100);
-        pressure = random.Next(980, 1040);
-        MeasurementsChanged();
+        shows.Add(show);
     }
 
-    
-
-    private void MeasurementsChanged()
+    public void Deattach(IDisplay show)
     {
-        CurrentConditionsDisplay.GetInstance().Update();
-        StatisticsDisplay.GetInstance().Update();
-        ForecastDisplay.GetInstance().Update();
+        shows.Remove(show);
+    }
+   
+    private void Notify()
+    {
+        foreach (var show in shows)
+        {
+            show.Display(temperature,humidity,pressure);
+        }
     }
 }

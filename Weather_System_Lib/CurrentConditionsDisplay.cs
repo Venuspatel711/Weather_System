@@ -1,32 +1,19 @@
 /// <summary>
 /// Represents the current conditions display.
 /// </summary>
+// CurrentConditionsDisplay Observer and Decorator
 public class CurrentConditionsDisplay : IDisplay
 {
-    private readonly WeatherData weatherData;
+    private double temperature;
+    private double humidity;
+    private double pressure;
 
-    private CurrentConditionsDisplay()
+    public void Display(double temperature, double humidity, double pressure)
     {
-        weatherData = WeatherData.GetInstance();
-    }
-
-    public static CurrentConditionsDisplay GetInstance()
-    {
-        return new CurrentConditionsDisplay();
-    }
-
-    public void Update()
-    {
-        Display();
-    }
-
-    public void Display()
-    {
-        float temperature = weatherData.GetTemperature();
-        float humidity = weatherData.GetHumidity();
-        float pressure = weatherData.GetPressure();
-
-        // Display current conditions
-        Console.WriteLine($"Current conditions: {temperature}F degrees and {humidity}% humidity");
-    }
+        this.temperature = temperature;
+        this.humidity = humidity;
+        this.pressure = pressure;
+    
+        Console.WriteLine($"Current Conditions: {temperature}F, {humidity}% humidity, {pressure}Pa pressure");
+    }
 }

@@ -4,7 +4,7 @@
 public class WeatherStation
 {
 
-    public void IDisplay SelectDisplay (string choice)
+    public static IDisplay SelectDisplay (string choice)
     {
 
         switch (choice)
@@ -14,12 +14,12 @@ public class WeatherStation
                 return ccd;
                 // break;
             case "2":
-                ForecastDisplay fd = new ForecastDisplay();
-                return fd;
+                //ForecastDisplay fd = new ForecastDisplay();
+                //return fd;
                 // break;
             case "3":
-                StatisticsDisplay sd = new StatisticsDisplay();
-                return sd;
+                //StatisticsDisplay sd = new StatisticsDisplay();
+                //return sd;
                 // break;
             default:
                 Console.WriteLine("Invalid choice.");

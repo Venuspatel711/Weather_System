@@ -3,5 +3,5 @@
 /// </summary>
 public interface IDisplay
 {
-    void Display();
+    void Display(double temperature, double humidity, double pressure);
 }
