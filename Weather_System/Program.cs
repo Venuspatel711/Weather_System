@@ -3,10 +3,13 @@
 WeatherData wd = WeatherData.GetInstance;
 
 wd.Attach(new CurrentConditionsDisplay());
+wd.Attach(new ForecastDisplay());
+wd.Attach(new StatisticsDisplay());
 
-Random rd = new Random();
-for (int i = 0; i < 5; i++)
+for (int i = 0; i < 1; i++)
         {
+            Random rd = new Random();
+
             double temperature = rd.Next(60, 90);
             double humidity = rd.Next(40, 80);
             double pressure = rd.Next(990, 1010);

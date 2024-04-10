@@ -10,20 +10,23 @@ public class WeatherStation
         switch (choice)
         {
             case "1":
-                CurrentConditionsDisplay ccd = new CurrentConditionsDisplay();
-                return ccd;
-                // break;
+           CurrentConditionsDisplay ccd = new CurrentConditionsDisplay();
+           return ccd;
+                
+            break;
             case "2":
-                //ForecastDisplay fd = new ForecastDisplay();
-                //return fd;
-                // break;
+            StatisticsDisplay sd = new StatisticsDisplay();
+            return sd;
+            break;
+            
             case "3":
-                //StatisticsDisplay sd = new StatisticsDisplay();
-                //return sd;
-                // break;
+            ForecastDisplay fd = new ForecastDisplay();
+            return fd;
+            break;
+
             default:
-                Console.WriteLine("Invalid choice.");
-                return;
+            throw new Exception("Invalid choice.");
+
 
         }
         

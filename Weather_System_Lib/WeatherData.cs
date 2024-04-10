@@ -8,9 +8,9 @@ public class WeatherData
 {
     private static WeatherData instance;
     //private readonly Random random;
-    private double temperature;
-    private double humidity;
-    private double pressure;
+    public double temperature;
+    public double humidity;
+    public double pressure;
 
     private List<IDisplay> shows = new List<IDisplay>();
 
