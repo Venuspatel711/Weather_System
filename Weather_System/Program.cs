@@ -1,13 +1,4 @@
-﻿// Program.cs
-class Program
-{
-    static void Main(string[] args)
-    {
-        WeatherData weatherData = WeatherData.GetInstance();
-        WeatherStation weatherStation = new WeatherStation();
-        weatherStation.GetUserInput();
+﻿using Weather_System_Lib;
 
-        weatherData.SetMeasurements();
-        
-    }
-}
+WeatherData wd = WeatherData.GetInstance;
+

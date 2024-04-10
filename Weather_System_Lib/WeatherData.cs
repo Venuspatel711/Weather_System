@@ -10,16 +10,24 @@ public class WeatherData
     private float humidity;
     private float pressure;
 
+    private List<IDisplay> shows = new List<IDisplay>();
+
     private WeatherData()
     {
         random = new Random();
     }
 
-    public static WeatherData GetInstance()
+    public static WeatherData GetInstance
     {
-        return instance ??= new WeatherData();
+        get{
+             return instance = new WeatherData();
+           }
     }
 
+    public void Attach(IDisplay show)
+    {
+        display.add
+    }
     public void SetMeasurements()
     {
         temperature = random.Next(-20, 40);
@@ -28,20 +36,7 @@ public class WeatherData
         MeasurementsChanged();
     }
 
-    public float GetTemperature()
-    {
-        return temperature;
-    }
-
-    public float GetHumidity()
-    {
-        return humidity;
-    }
-
-    public float GetPressure()
-    {
-        return pressure;
-    }
+    
 
     private void MeasurementsChanged()
     {
