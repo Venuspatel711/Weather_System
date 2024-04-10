@@ -1,3 +1,6 @@
+/// <summary>
+/// Represents the weather statistics display.
+/// </summary>
 public class StatisticsDisplay : IDisplay
 {
     private readonly WeatherData weatherData;

@@ -8,7 +8,6 @@ class Program
         weatherStation.GetUserInput();
 
         weatherData.SetMeasurements();
-        weatherData.SetMeasurements();
-        weatherData.SetMeasurements();
+        
     }
 }

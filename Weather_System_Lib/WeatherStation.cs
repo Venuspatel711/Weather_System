@@ -1,20 +1,8 @@
-// WeatherStation.cs
+/// <summary>
+/// Represents the weather station factory.
+/// </summary>
 public class WeatherStation
 {
-    public IDisplay CreateDisplay(DisplayType type)
-    {
-        switch (type)
-        {
-            case DisplayType.CurrentConditions:
-                return CurrentConditionsDisplay.GetInstance();
-            case DisplayType.Statistics:
-                return StatisticsDisplay.GetInstance();
-            case DisplayType.Forecast:
-                return ForecastDisplay.GetInstance();
-            default:
-                throw new ArgumentException("Invalid display type");
-        }
-    }
     public void GetUserInput()
     {
         Console.WriteLine("Select display type:");
@@ -29,20 +17,25 @@ public class WeatherStation
         switch (choice)
         {
             case "1":
-                displayType = DisplayType.CurrentConditions;
+                Console.WriteLine(displayType = DisplayType.CurrentConditions);
                 break;
             case "2":
-                displayType = DisplayType.Statistics;
+                Console.WriteLine(displayType = DisplayType.Statistics);
                 break;
             case "3":
-                displayType = DisplayType.Forecast;
+                Console.WriteLine(displayType = DisplayType.Forecast);
                 break;
             default:
-                Console.WriteLine("Invalid choice. Please try again.");
+                Console.WriteLine("Invalid choice.");
                 return;
         }
+        
+
 }
 }
+/// <summary>
+/// Represents the weather station factory.
+/// </summary>
 public enum DisplayType
 {
     CurrentConditions,

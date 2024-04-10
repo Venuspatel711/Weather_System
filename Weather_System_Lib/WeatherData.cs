@@ -1,3 +1,7 @@
+/// <summary>
+/// Represents the weather data subject.
+/// </summary>
+
 public class WeatherData
 {
     private static WeatherData instance;
@@ -41,7 +45,6 @@ public class WeatherData
 
     private void MeasurementsChanged()
     {
-        // Notify observers
         CurrentConditionsDisplay.GetInstance().Update();
         StatisticsDisplay.GetInstance().Update();
         ForecastDisplay.GetInstance().Update();
