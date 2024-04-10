@@ -13,7 +13,7 @@ public class StatisticsDisplay : IDisplay
         double average = temperatures.Count > 0 ? temperatures.Average() : 0;
         double max = temperatures.Count > 0 ? temperatures.Max() : 0;
         double min = temperatures.Count > 0 ? temperatures.Min() : 0;
-        Console.WriteLine($"Average Temperature: {average}F, Max Temperature: {max}F, Min Temperature: {min}F");
+        Console.WriteLine($"Average Temperature: {average}F, Maximum Temperature: {max}F, Minimum Temperature: {min}F");
     }
 }
 
