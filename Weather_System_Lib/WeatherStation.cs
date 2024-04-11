@@ -1,5 +1,5 @@
 /// <summary>
-/// Represents the weather station factory.
+/// it represents the weather station factory of assignment.
 /// </summary>
 public class WeatherStation
 {

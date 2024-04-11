@@ -1,5 +1,5 @@
 /// <summary>
-/// Represents the current conditions display.
+/// it represents the current conditions display of project.
 /// </summary>
 // CurrentConditionsDisplay Observer and Decorator
 public class CurrentConditionsDisplay : IDisplay

@@ -1,5 +1,5 @@
 /// <summary>
-/// Represents a display element.
+/// it represents a display element of project.
 /// </summary>
 public interface IDisplay
 {

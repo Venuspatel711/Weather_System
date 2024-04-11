@@ -1,7 +1,7 @@
 namespace Weather_System_Lib;
 using System.Collections.Generic;
 /// <summary>
-/// Represents the weather data subject.
+/// it represents the weather data subject of project.
 /// </summary>
 
 public class WeatherData

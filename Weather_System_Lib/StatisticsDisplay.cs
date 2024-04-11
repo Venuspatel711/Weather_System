@@ -1,3 +1,7 @@
+/// <summary>
+/// it represents the statistic display of project.
+/// </summary>
+
 public class StatisticsDisplay : IDisplay
 {
     private List<double> temperatures = new List<double>();
