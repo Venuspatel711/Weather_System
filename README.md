@@ -9,3 +9,4 @@ i solved that error with some tools and with other student made my day.
 at the and i use build and check all the error and warnings.
 i run the code and have tried to get possible output gave by beloved professor.
 Although,i have faced many challanegs,got main output. 
+At last time changes i have added documetation to all the files.
